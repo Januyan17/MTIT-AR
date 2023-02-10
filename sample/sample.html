@@ -1,0 +1,83 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+      />
+      <title></title>
+    </head>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+    <body style="overflow: hidden">
+      <a-scene
+        embedded
+        vr-mode-ui="enabled: false"
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+      >
+        <a-marker type="barcode" value="60" arjs-anchor="smooth: true">
+          <a-entity
+            animation="property: rotation; dur: 10000; to: 0 360 0; loop: true"
+            gltf-model="3d/4/scene.gltf"
+            scale="0.1 0.1 0.1"
+            position="0 0.64762 0"
+          ></a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="27" arjs-anchor="smooth: true">
+          <a-entity
+            animation="property: rotation; dur: 10000; to: 0 360 0; loop: true"
+            gltf-model="3d/2/scene.gltf"
+            scale="0.1 0.1 0.1"
+            position="0 0.426 0"
+          ></a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="18" arjs-anchor="smooth: true">
+          <a-entity
+            animation="property: rotation; dur: 10000; to: 0 360 0; loop: true"
+            gltf-model="3d/3/scene.gltf"
+            scale="0.08 0.08 0.08"
+            position="0 0.022 0"
+          ></a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="30" arjs-anchor="smooth: true">
+          <a-entity
+            animation="property: rotation; dur: 10000; to: 0 360 0; loop: true"
+            gltf-model="3d/1/scene.gltf"
+            scale="0.04 0.04 0.04"
+            position="0 0.679 0"
+          ></a-entity>
+        </a-marker>
+
+        <a-entity
+          light="intensity: 1; castShadow: true"
+          position="1 1 1"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 1; castShadow: true"
+          position="1 1 -1"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 1; castShadow: true"
+          position="-1 1 -1"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity
+          light="intensity: 1; castShadow: true"
+          position="-1 1 1"
+          data-aframe-default-light=""
+          aframe-injected=""
+        ></a-entity>
+        <a-entity camera></a-entity>
+      </a-scene>
+    </body></html
+></DOCTYPE>
